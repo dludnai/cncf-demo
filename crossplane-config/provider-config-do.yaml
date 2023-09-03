@@ -1,0 +1,11 @@
+apiVersion: do.crossplane.io/v1alpha1
+kind: ProviderConfig
+metadata:
+  name: do
+spec:
+  credentials:
+    source: Secret
+    secretRef:
+      name: do-token
+      namespace: crossplane-system
+      key: token
